@@ -5,49 +5,75 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 1em;
+}
+:root{
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: 'Passion One', cursive;
+    --fonte3: 'Sriracha', cursive;
+}
+html, body{
+    min-height: 100%vh;
+    background-color: darkgray;
+    font-family: var(--fonte1);
 }
 header{
     background-color: black;
-    padding: 5em;
-}
-h1{
-    color: whitesmoke;
+    color: white;
     text-align: center;
-    padding: 1em;
-    padding-bottom: 0;
-    font-family: 'Passion One', sans-serif;
-    font-size: 5em;
 }
-h1 > span{
-    font-size: 1.5em;
+header > h1{
+    padding: 50px;
+    font-variant: small-caps;
+    font-family: var(--fonte2);
 }
-header > p {
-    color: whitesmoke;
+header > p{
+    padding-bottom: 50px;
+}
+header a, footer a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+header > a:hover, footer > a:hover{
+    text-decoration: underline;
+}
+section{
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 2em;
+    padding-left: 30px  ;
+    font-family: var(--fonte3);
+    font-size: 2em;
+}
+.normal{
+    background-color: white;
+    color: black;
+}
+.imagem{
+    background-color:dimgrey;
+}
+#img01{
+    background-image: url(imagens/background001.jpg);
+    background-position: right center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#img02{
+    background-image: url(imagens/background002.jpg);
+    background-position: right center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.imagem > p{
+    width: 400px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px;
+}
+footer{
+    background-color: black;
+    color: white;
     text-align: center;
-    padding: 5em;
-    padding-top: 0;
-    font-family: Arial, Helvetica, sans-serif;
-}
-main > p{
-    font-size: 2.5em;
-    padding: 5em 1em;
-    font-family: 'Sriracha';
-}
-div{
-    position: relative;
-    width: 100%;
-}
-img{
-    position: relative;
-    width: 100%;
-}
-div > p{
-    font-size: 2.5em;
-    position: absolute;
-    top: 2.5em;
-    left: 0;
-    padding: 5em 1em;
-    font-family: 'Sriracha';
-    color: whitesmoke;
-    background-color: rgba(0, 0, 0, 0.500);
+    padding: 10px;
 }

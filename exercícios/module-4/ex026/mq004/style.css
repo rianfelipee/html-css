@@ -1,0 +1,147 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+html {
+    height: 100vh;
+}
+body {
+    background: black url(../images/back-phone.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+main {
+    background-color: rgba(255, 255, 255, 0.75);
+    width: 400px;
+    margin: 20px auto;
+    border-radius: 10px;
+    padding: 10px;
+}
+h1 {
+    text-align: center;
+    text-shadow: 0px 2px 10px whitesmoke;
+}
+img {
+    display: block;
+    margin: auto;
+}
+#tablet {
+    display: none;
+}
+#print {
+    display: none;
+}
+#pc {
+    display: none;
+}
+#tv {
+    display: none;
+}
+/*
+
+Typical Device Breakpoints
+---------------------------------
+* Pequenas telas: até 600px 
+* Celular: 600px até 768px
+* Tablet: 768px até 992px
+* Desktop: 992px até 1200px
+* Grandes telas: acima de 1200px
+
+*/
+@media print {
+    body{
+        font-family: 'Courier New', Courier, monospace;
+    }
+    main{
+        border: 2px solid black;
+        width: 90vw;
+    }
+    main h1{
+        font-family: 'Times New Roman', Times, serif;
+        text-shadow: none;
+    }
+    #phone{
+        display: none;
+    }
+    #tablet {
+        display: none;
+    }
+    #print {
+        display: block;
+    }
+    #pc {
+        display: none;
+    }
+    #tv {
+        display: none;
+    }
+    main::after{
+        content: 'Essa impressão foi disponibilizada por Rian Felipe - github.com/rianfelipee';
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    body{
+        background-image: url(../images/back-tablet.jpg);
+    }
+    #phone{
+        display: none;
+    }
+    #tablet {
+        display: block;
+    }
+    #print {
+        display: none;
+    }
+    #pc {
+        display: none;
+    }
+    #tv {
+        display: none;
+    }
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    body{
+        background-image: url(../images/back-pc.jpg);
+    }
+    #phone{
+        display: none;
+    }
+    #tablet {
+        display: none;
+    }
+    #print {
+        display: none;
+    }
+    #pc {
+        display: block;
+    }
+    #tv {
+        display: none;
+    }
+}
+@media screen and (min-width: 1200px) {
+    body{
+        background-image: url(../images/back-tv.jpg);
+    }
+    main{
+        width: 700px;
+    }
+    #phone{
+        display: none;
+    }
+    #tablet {
+        display: none;
+    }
+    #print {
+        display: none;
+    }
+    #pc {
+        display: none;
+    }
+    #tv {
+        display: block;
+    }
+}

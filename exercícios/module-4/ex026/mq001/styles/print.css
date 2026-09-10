@@ -1,0 +1,18 @@
+@charset "UTF-8";
+*{
+    margin: 10px;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+html{
+    line-height: 1.5em;
+}
+menu{
+    display: none;
+}
+article{
+    width: 100%;
+}
+article::after{
+    content: 'este artigo foi impresso por Rian Felipe.';
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Entrar</h1>
+            <form action="login.php" method="post">
+                <div>
+                    <input class="info" type="email" name="email" id="iemail" placeholder="E-mail" required>
+                </div>
+                <div>
+                    <input class="info" type="password" name="senha" id="isenha" placeholder="Senha" minlength="6" autocomplete="current-password" required>
+                </div>
+                <div>
+                    <input id="entrar" type="submit" value="ENTRAR">
+                </div>
+                <a class="button" href="pages/forgot.html">ESQUECI MINHA SENHA</a>
+                <p id="signup">Não tem uma conta? <a href="pages/sign-up.html">CADASTRE-SE</a></p>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

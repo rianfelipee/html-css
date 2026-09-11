@@ -1,0 +1,106 @@
+@charset "UTF-8";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+:root{
+    --azul: hsl(195, 53%, 50%);
+    --claro: hsl(195, 53%, 55%);
+    --fundo: hsl(0, 0%, 15%);
+    --border: hsl(0, 0%, 40%);
+    --info: hsl(0, 0%, 25%);
+}
+body{
+    min-height: 100vh;
+    background: linear-gradient(to bottom, hsl(195, 53%, 75%), hsl(195, 53%, 40%)) no-repeat;
+    background-size: cover;
+}
+main{
+    background-color: var(--fundo);
+    height: 100vh;
+}
+h1{
+    color: whitesmoke;
+    text-align: center;
+    padding: 5em;
+    padding-bottom: 1em;
+}
+input[type=email], [type=password]{
+    background-color: var(--info);
+    width: 385px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid var(--border);
+    display: block;
+    color: whitesmoke;
+    margin: 15px auto;
+    font-size: 15px;
+}
+.info::placeholder{
+    color: lightgray;
+}
+.info:hover{
+    border: 2px solid var(--azul);
+}
+.info:focus{
+    border: 2px solid var(--azul);
+    outline: none;
+}
+#entrar{
+    display: block;
+    margin: 30px auto 15px;
+    width: 385px;
+    height: 50px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 5px hsl(195, 53%, 25%);
+    background-color: var(--azul);
+    color: whitesmoke;
+}
+#entrar:hover{
+    background-color: var(--claro);
+}
+.button{
+    display: block;
+    margin: 15px auto;
+    width: 385px;
+    height: 53px;
+    padding: 10px;
+    padding-top: 15.8px;
+    font-size: 15px;
+    font-weight: bold;
+    border: 2px solid var(--border);
+    border-radius: 10px;
+    box-shadow: 0px 3px var(--border);
+    color: var(--azul);
+    text-decoration: none;
+    text-align: center;
+}
+.button:hover{
+    background-color: hsl(0, 0%, 10%);
+}
+#signup{
+    margin: 5em;
+    text-align: center;
+    color: whitesmoke;
+    font-weight: 600;
+}
+#signup a{
+    text-decoration: none;
+    color: var(--azul);
+}
+@media screen and (min-width: 1040px) {
+    main{
+        margin: 30px auto;
+        width: 1024px;
+        border-radius: 20px;
+        height: auto;
+        padding: 1em;
+    }
+}
